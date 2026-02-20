@@ -1,11 +1,18 @@
+// 1. Create a class MyThread that extends Thread
 class MyThread extends Thread {
-    // TODO: Override the run() method
-    // Inside run(), print "Thread is running"
+    // 2. Override the run method to define the thread's action
+    @Override
+    public void run() {
+        System.out.println("Thread is running");
+    }
 }
 
-public class ExtendThread {
+public class Main {
     public static void main(String[] args) {
-        // TODO: Create an object of MyThread
-        // TODO: Start the thread using start() method
+        // 3. Create an instance of the MyThread class
+        MyThread t = new MyThread();
+        
+        // 4. Start the thread (this internally calls the run method)
+        t.start();
     }
 }
